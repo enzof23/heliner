@@ -9,7 +9,8 @@ export default {
         mono: ["Roboto"].concat(defaultTheme.fontFamily.mono),
       },
       colors: {
-        "background-dark": "#1E1B16",
+        dark: "#1E1E1E",
+        light: "#F3F3F3",
         "heliner-orange": "#F39800",
       },
     },

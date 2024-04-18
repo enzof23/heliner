@@ -1,14 +1,18 @@
 ---
 import type { HTMLAttributes } from "astro/types";
 
-import "../styles/global.ts";
+import "../styles/global.css";
 
 type Props = HTMLAttributes<"html"> & {
   title?: string;
   description?: string;
 };
 
-const { title = "Update Title", description = title, ...html } = Astro.props;
+const {
+  title = "Update Title",
+  description = "Update Description",
+  ...html
+} = Astro.props;
 ---
 
 <!doctype html>
@@ -20,19 +24,10 @@ const { title = "Update Title", description = title, ...html } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
-
-    <!-- TODO : fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
-
     <slot name="head" />
   </head>
 
-  <body class="min-h-screen flex flex-col font-mono">
+  <body>
     <slot name="body" />
   </body>
 </html>

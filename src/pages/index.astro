@@ -1,15 +1,30 @@
 ---
 import Layout from "../layouts/Layout.astro";
-
-import Video from "../components/Video.astro";
-import Header from "../components/Header.astro";
 import Main from "../components/Main.tsx";
-import Footer from "../components/Footer.astro";
 ---
 
 <Layout>
-  <Video />
-  <Header />
-  <Main client:load />
-  <Footer />
+  <main class="flex flex-col min-h-screen bg-dark">
+    <!-- Header Section w/ Logo -->
+    <header class="mx-auto py-4">
+      <img src="heliner-logo.png" alt="Heliner Logo" />
+    </header>
+
+    <!-- Main Component w/ Form -->
+    <Main client:load />
+
+    <!-- Footer Section w/ Links -->
+    <footer class="flex justify-between p-8 bg-dark text-heliner-orange">
+      <p class="font-medium">&copy; Heliner 2024</p>
+
+      <ul class="flex gap-3">
+        <li>
+          <a href="/">T&C's</a>
+        </li>
+        <li>
+          <a href="/">Other Links</a>
+        </li>
+      </ul>
+    </footer>
+  </main>
 </Layout>

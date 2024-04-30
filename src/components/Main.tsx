@@ -1,4 +1,4 @@
-import { Switch, Match, createSignal } from "solid-js";
+import { Switch, Match, createSignal, type JSX } from "solid-js";
 import { Default, Form, Sent } from "./main/_index";
 
 import type { Views } from "../utils/type";
@@ -7,31 +7,34 @@ export default function () {
   const [view, setView] = createSignal<Views>("default");
 
   return (
-    <main class="relative flex-1 grid place-items-center">
-      <video
-        class="absolute object-cover h-full w-full"
-        src="heliner-video.mp4"
-        autoplay
-        loop
-        muted
-        playsinline
-      ></video>
-
-      <div class="relative flex flex-col gap-4 p-8 max-w-sm rounded-lg bg-neutral-100/60 backdrop-blur-md text-center">
-        <Switch>
-          <Match when={view() === "default"}>
+    <div class="flex-1 flex items-center justify-center z-10 md:justify-start">
+      <Switch>
+        <Match when={view() === "default"}>
+          <FormWrapper>
             <Default action={setView} />
-          </Match>
+          </FormWrapper>
+        </Match>
 
-          <Match when={view() === "form"}>
+        <Match when={view() === "form"}>
+          <FormWrapper>
             <Form action={setView} />
-          </Match>
+          </FormWrapper>
+        </Match>
 
-          <Match when={view() === "sent"}>
+        <Match when={view() === "sent"}>
+          <FormWrapper>
             <Sent action={setView} />
-          </Match>
-        </Switch>
-      </div>
-    </main>
+          </FormWrapper>
+        </Match>
+      </Switch>
+    </div>
+  );
+}
+
+function FormWrapper({ children }: { children: JSX.Element }) {
+  return (
+    <div class="flex-1 flex flex-col px-4 py-6 gap-6 max-w-lg md:ml-12 md:py-12 md:px-10 md:max-w-xl md:rounded-lg md:bg-neutral-100/60 md:backdrop-blur-md">
+      {children}
+    </div>
   );
 }

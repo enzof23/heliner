@@ -4,22 +4,33 @@ import Main from "../components/Main.tsx";
 ---
 
 <Layout>
-  <main class="flex flex-col min-h-screen bg-dark">
-    <!-- Header Section w/ Logo -->
-    <header class="mx-auto py-4">
-      <img src="heliner-logo.png" alt="Heliner Logo" />
+  <main class="flex flex-col min-h-screen bg-color-light md:relative">
+    <header class="w-full py-6 z-10">
+      <img
+        class="mx-auto h-14 md:mx-0 md:h-20 md:ml-12"
+        src="heliner-logo.png"
+        alt="Heliner Logo"
+      />
     </header>
 
-    <!-- Main Component w/ Form -->
+    <video
+      class="w-full md:absolute md:object-cover md:h-[calc(100vh-88px)]"
+      src="heliner-video.mp4"
+      autoplay
+      loop
+      muted
+      playsinline></video>
+
     <Main client:load />
 
-    <!-- Footer Section w/ Links -->
-    <footer class="flex justify-between p-8 bg-dark text-heliner-orange">
+    <footer
+      class="flex flex-col-reverse items-start md:flex-row md:justify-between gap-3 p-8 bg-dark text-heliner-orange"
+    >
       <p class="font-medium">&copy; Heliner 2024</p>
 
-      <ul class="flex gap-3">
+      <ul class="flex gap-3 flex-col md:flex-row">
         <li>
-          <a href="/">T&C's</a>
+          <a href="/">Terms & Conditions</a>
         </li>
         <li>
           <a href="/">Other Links</a>

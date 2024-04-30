@@ -1,3 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --light: #e9e4de;
+  --grey: rgba(30, 27, 27, 20%);
+  --dark: rgba(30, 27, 27, 80%);
+}
+
+.bg-color-light {
+  background-color: var(--light);
+}
+
+.bg-color-grey {
+  background-color: var(--grey);
+}
+
+.input {
+  flex-grow: 1;
+  border: 1px solid var(--dark);
+  border-radius: 6px;
+  padding: 4px 8px;
+  color: var(--dark);
+}

@@ -33,7 +33,7 @@ export default function () {
 
 function FormWrapper({ children }: { children: JSX.Element }) {
   return (
-    <div class="flex-1 flex flex-col px-4 py-6 gap-6 max-w-lg md:ml-12 md:py-12 md:px-10 md:max-w-xl md:rounded-lg md:bg-neutral-100/60 md:backdrop-blur-md">
+    <div class="flex-1 flex flex-col px-4 py-6 gap-6 max-w-lg md:ml-16 md:py-12 md:px-10 md:max-w-[580px] md:rounded-lg md:bg-neutral-100/60 md:backdrop-blur-md">
       {children}
     </div>
   );

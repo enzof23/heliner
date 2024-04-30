@@ -8,6 +8,10 @@
   --dark: rgba(30, 27, 27, 80%);
 }
 
+* {
+  font-family: Inter, sans-serif;
+}
+
 .bg-color-light {
   background-color: var(--light);
 }

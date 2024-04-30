@@ -9,8 +9,8 @@ type Props = HTMLAttributes<"html"> & {
 };
 
 const {
-  title = "Update Title",
-  description = "Update Description",
+  title = "Heliner",
+  description = "Precision CNC solutions, customised for you, supported locally. Whether your project is small or large scale, from prototypes to production runs, we're here to help!",
   ...html
 } = Astro.props;
 ---
@@ -22,6 +22,14 @@ const {
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
     <slot name="head" />

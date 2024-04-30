@@ -32,8 +32,8 @@ export default function ({ action }: { action: Setter<Views> }) {
 
   return (
     <>
-      <h2 class="text-xl md:text-center italic font-medium md:text-3xl">
-        Ready to carve your success <br /> with precision beyond compare?
+      <h2 class="text-pretty text-lg sm:text-2xl md:text-center italic font-semibold md:text-3xl">
+        Ready to carve your success with precision beyond compare?
       </h2>
 
       <form
@@ -90,7 +90,7 @@ function InputGroup({
     <div class="flex gap-2 items-center">
       <label
         for={name}
-        class="min-w-[70px] md:min-w-[80px] md:text-end capitalize"
+        class="min-w-[73px] md:min-w-[82px] md:text-end font-medium capitalize"
       >
         {name}
       </label>

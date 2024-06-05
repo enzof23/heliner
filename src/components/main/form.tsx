@@ -1,4 +1,5 @@
 import emailjs from "@emailjs/browser";
+import { ArrowLeft } from "lucide-solid";
 
 import type { Views } from "../../utils/type";
 import { createSignal, type JSX, type Setter } from "solid-js";
@@ -32,6 +33,14 @@ export default function ({ action }: { action: Setter<Views> }) {
 
   return (
     <>
+      <button
+        onClick={() => action("default")}
+        class="flex items-center gap-[3px] font-medium"
+      >
+        <ArrowLeft size={16} />
+        Back
+      </button>
+
       <h2 class="text-pretty text-lg sm:text-2xl md:text-center italic font-semibold md:text-3xl">
         Ready to carve your success with precision beyond compare?
       </h2>
@@ -69,7 +78,7 @@ export default function ({ action }: { action: Setter<Views> }) {
 
         <button
           disabled={sending()}
-          class="px-4 py-3 bg-heliner-orange rounded-md font-bold md:self-end md:px-8 md:text-xl md:uppercase"
+          class="px-5 py-3 bg-heliner-orange rounded-md font-bold md:self-end md:px-8 md:text-xl md:uppercase"
           type="submit"
         >
           {sending() ? "Sending" : "Submit"}

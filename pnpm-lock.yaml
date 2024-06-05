@@ -23,6 +23,9 @@ dependencies:
   astro:
     specifier: ^4.5.14
     version: 4.5.14(typescript@5.4.3)
+  lucide-solid:
+    specifier: ^0.383.0
+    version: 0.383.0(solid-js@1.8.16)
   solid-js:
     specifier: ^1.8.16
     version: 1.8.16
@@ -2748,6 +2751,14 @@ packages:
     engines: {node: '>=10'}
     dependencies:
       yallist: 4.0.0
+    dev: false
+
+  /lucide-solid@0.383.0(solid-js@1.8.16):
+    resolution: {integrity: sha512-taIphchsZDyArTQkLyOhEQ3duIn0X/emfFhUySexrc1mg99EEFpCoKT/x+x4V39mWqlieKCaLKx+2goQWaE7Lg==}
+    peerDependencies:
+      solid-js: ^1.4.7
+    dependencies:
+      solid-js: 1.8.16
     dev: false
 
   /magic-string@0.30.8:

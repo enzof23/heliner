@@ -4,15 +4,15 @@ import type { Views } from "../../utils/type";
 export default function ({ action }: { action: Setter<Views> }) {
   return (
     <>
-      <h2 class="text-pretty text-4xl italic font-semibold md:text-6xl md:font-medium">
-        Shaping Futures, Carving Success.
+      <h2 class="text-pretty text-4xl italic font-semibold md:text-6xl md:font-semibold md:leading-tight">
+        We Automate Door Manufacturing.
       </h2>
 
-      <p class="text-pretty text-lg md:text-xl">
-        Precision CNC solutions, customised for you, supported locally. Whether
-        your project is small or large scale, from prototypes to production
-        runs, we're here to help!
-      </p>
+      <ul class="list-disc list-inside text-lg font-normal md:text-2xl">
+        <li>Customised for you</li>
+        <li>Local solutions</li>
+        <li>Local support</li>
+      </ul>
 
       <button
         class="px-4 py-3 bg-heliner-orange rounded-md font-bold md:self-end md:px-8 md:text-xl md:uppercase"

@@ -4,7 +4,7 @@ import { Default, Form, Sent } from "./main/_index";
 import type { Views } from "../utils/type";
 
 export default function () {
-  const [view, setView] = createSignal<Views>("form");
+  const [view, setView] = createSignal<Views>("default");
 
   return (
     <div class="flex-1 flex items-center justify-center z-10 md:justify-start">
